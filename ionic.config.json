@@ -1,0 +1,7 @@
+{
+  "name": "PetPlus",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
