@@ -1,0 +1,27 @@
+<ion-content>
+  <ion-content>
+    <div>
+      <h1 class="letra1 centrotxt" > <b>Busca la ficha de tu animal</b> </h1>
+      <br>
+    </div>
+  <div class="centrotxt">
+    <ion-item class="input" fill="solid">
+      <ion-label position="floating">N°Ficha</ion-label>
+      <ion-input [(ngModel)]="buscar_input" ></ion-input>
+    </ion-item>
+    <br>
+    <ion-button class="botonlistar2" shape="round" (click)="buscar()" type="button">Buscar</ion-button>
+  </div>
+  <div>
+    <ion-item>
+        <img class="imagen" src="assets\veterinary(2).png" >
+        <ion-label><h1 class="letras1">{{ nombreA }}</h1> 
+                   <h2 class="letras2">{{n_microchip}}</h2>
+                   <h2 class="letras2">{{nombre_color}}</h2>
+                   <h2 class="letras2">{{nombre_sexo}}</h2>
+                   <h2 class="letras2">{{nombre_dueno}}</h2>
+                   <h2 class="letras2">{{nombre_estado}}</h2>
+        </ion-label>
+      </ion-item>
+  </div>
+</ion-content>

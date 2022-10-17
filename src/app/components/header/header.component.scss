@@ -1,0 +1,58 @@
+@media(min-width: 768px) {
+    .mobile-header{
+        display: none;
+    }
+
+    .header {
+            margin: auto;
+            display: flex;
+            background: #7ed957;
+            padding: auto;
+    }
+    }
+    
+@media(max-width: 768px) {
+    .mobile-header {
+        display: block;
+    }
+
+    .header {
+        display: none;
+    }
+}
+
+.active-item {
+    border-bottom: 1px solid var(--ion-color-secondary);
+}
+
+.dropdown {
+    width: 130px;
+    height: 10px;
+    background: white;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    z-index:1;
+    
+    ion-item:hover{
+        --ion-item-color: var(--ion-color-primary)
+    }
+}
+
+
+.icon{
+    max-width: 48px;
+    margin-right: 10%;
+    margin-left: 6%;
+  }
+
+.letrasHeader{
+    color: white;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 12pt;
+}
+// VERDE #7ed957
+// AZUL PERRO #000646
+// AZUL GATO #484277
+// AZUL CONEJO #18246e
+// BLANCO #eaeaca
