@@ -77,7 +77,8 @@ export class AnimalesPage implements OnInit {
 
   }
 
-  ListColor() {
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  ListColor(): void {
     this.serviceanimal.getColor().subscribe((result: Color[]) => {
       console.log(result);
       this.animal = result;
