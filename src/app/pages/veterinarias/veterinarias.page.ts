@@ -8,6 +8,8 @@ import { VeterinariaService } from './vetiservice/veterinaria.service';
 })
 export class VeterinariasPage implements OnInit {
 
+  filterTerm='';
+
   constructor(private servicesveti: VeterinariaService) { }
 
   public veterinarias: Array<any> = [];
