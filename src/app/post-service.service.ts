@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class PostServiceProvider {
 
-  url = 'http://127.0.0.1:8000/app_veterinaria/veterinaria/';
+  url = 'http://api-petplus-duocuc.herokuapp.com/app_veterinaria/veterinaria/';
 
   constructor(public http: HttpClient) {
 

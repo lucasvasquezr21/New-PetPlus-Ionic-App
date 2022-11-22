@@ -20,6 +20,11 @@ export class MenuPage implements OnInit {
       path: '/about'
     },
     {
+      title: 'Escanea el QR!',
+      icon: 'qr-code-outline',
+      path: '/scanner'
+    },
+    {
       title: 'Fichas',
       icon: 'paw-outline',
       path: '/animales'

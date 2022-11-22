@@ -11,7 +11,6 @@ const routes: Routes = [
         path: '',
         loadChildren: () => import('../home/home.module').then( m => m.HomePageModule)
       },
-
       {
         path: 'about',
         loadChildren: () => import('../about/about.module').then( m => m.AboutPageModule)
@@ -19,6 +18,10 @@ const routes: Routes = [
       {
         path: 'animales',
         loadChildren: () => import('../animales/animales.module').then( m => m.AnimalesPageModule)
+      },
+      {
+        path: 'scanner',
+        loadChildren: () => import('../scanner/scanner.module').then(m => m.ScannerPageModule)
       },
       {
         path: 'veterinarias',

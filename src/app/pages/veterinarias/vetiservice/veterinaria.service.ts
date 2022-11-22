@@ -10,7 +10,7 @@ export class VeterinariaService {
 
 
   // eslint-disable-next-line @typescript-eslint/naming-convention
-  Urlveti = 'http://127.0.0.1:8000/app_veterinaria/veterinaria/';
+  Urlveti = 'http://api-petplus-duocuc.herokuapp.com/app_veterinaria/veterinaria/';
 
   constructor(private http : HttpClient) { }
 
