@@ -14,13 +14,13 @@ import { Sexo } from '../models/sexo';
 })
 export class AnimalService {
   
-  URLAnimal :  string = 'http://api-petplus-duocuc.herokuapp.com/app_animal/animal/';
-  URLcolor : string = "http://api-petplus-duocuc.herokuapp.com/app_color/color/";
-  URLsexo : string = "http://api-petplus-duocuc.herokuapp.com/app_sexo/sexo/";
-  URLespecie :string = "http://api-petplus-duocuc.herokuapp.com/app_especie/especie/";
-  URLraza:string="http://api-petplus-duocuc.herokuapp.com/app_raza/raza/";
-  URLestado:string="http://api-petplus-duocuc.herokuapp.com/app_estado/estado/";
-  URLdueno:string="http://api-petplus-duocuc.herokuapp.com/app_dueno/dueno/"
+  URLAnimal :  string = 'https://api-petplus-duocuc.herokuapp.com/app_animal/animal/';
+  URLcolor : string = "https://api-petplus-duocuc.herokuapp.com/app_color/color/";
+  URLsexo : string = "https://api-petplus-duocuc.herokuapp.com/app_sexo/sexo/";
+  URLespecie :string = "https://api-petplus-duocuc.herokuapp.com/app_especie/especie/";
+  URLraza:string="https://api-petplus-duocuc.herokuapp.com/app_raza/raza/";
+  URLestado:string="https://api-petplus-duocuc.herokuapp.com/app_estado/estado/";
+  URLdueno:string="https://api-petplus-duocuc.herokuapp.com/app_dueno/dueno/"
 
   constructor(private http : HttpClient) { }
 
