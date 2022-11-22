@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { VeterinariasPageRoutingModule } from './veterinarias-routing.module';
 
 import { VeterinariasPage } from './veterinarias.page';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    VeterinariasPageRoutingModule
+    VeterinariasPageRoutingModule,
+    Ng2SearchPipeModule
   ],
   declarations: [VeterinariasPage]
 })

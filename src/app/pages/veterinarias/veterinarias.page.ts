@@ -14,7 +14,6 @@ export class VeterinariasPage implements OnInit {
 
   ngOnInit():void {
     this.Listveti();
-    
     this.servicesveti.getVeterinarias().subscribe(v => this.todas= v);
 
   }

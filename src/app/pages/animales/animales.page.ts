@@ -96,7 +96,6 @@ export class AnimalesPage implements OnInit {
       this.nombreA = nuno.animales.nombre;
       this.n_microchip = nuno.animales.n_microchip;
 
-
       //Datos que se obtienen gracias a las foraenas en la BD
       this.idsexo = nuno.animales.sexo_id_sexo_id;
       this.idcolor = nuno.animales.color_id_color_id;

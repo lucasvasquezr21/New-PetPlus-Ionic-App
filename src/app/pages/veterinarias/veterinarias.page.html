@@ -5,31 +5,14 @@
   </div>
   
 
-  <ion-grid>
-    <div class="centrotxt">
-      <ion-list class="list">
-  <ion-item>
-    <ion-select interface="popover" placeholder="Selecciona comuna">
-      <ion-select-option value="apples">San Bernardo</ion-select-option>
-      <ion-select-option value="oranges">El bosque</ion-select-option>
-      <ion-select-option value="bananas">Ñuñoa</ion-select-option>
-    </ion-select>
-  </ion-item>
-</ion-list>
-    </div>
+    <ion-searchbar placeholder="Escribe tu comuna" [(ngModel)]="filterTerm" animated="true" showCancelButton="focus"></ion-searchbar>
     <br>   
-      <ion-col size="1" size-sm="6" size-md="4" size-lg="3" size-xl="2" *ngFor="let veterinarias of todas">
-        <ion-card class="card">
+      <ion-list>
+        <ion-item *ngFor="let veterinarias of todas | filter : filterTerm">
           <img class="imagenes" src="assets\veterinary.png">
-          <ion-label>
-              {{veterinarias.nombre_vet}}
-              {{veterinarias.direccion}}
-              {{veterinarias.descripcion}}
-        </ion-label>
-        </ion-card>
-      </ion-col>
-
-  </ion-grid>
-
-  
+          <ion-label> {{veterinarias.nombre_vet}} </ion-label>  
+          <ion-label> {{veterinarias.direccion}} </ion-label>  
+          <ion-label> {{veterinarias.descripcion}} </ion-label>
+        </ion-item>
+      </ion-list>
 </ion-content>
