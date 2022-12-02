@@ -2,14 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { AnimalService } from './animalservice/animal.service';
 import { Animal } from './models/animal';
 import { Color } from './models/color';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-animales',
   templateUrl: './animales.page.html',
   styleUrls: ['./animales.page.scss'],
 })
-export class AnimalesPage implements OnInit {
+export class AnimalesPage {
 
+  visible:boolean = false
+  
   public animal: Array<any> = [];
   public color: Array<any> = [];
 
@@ -61,12 +64,27 @@ export class AnimalesPage implements OnInit {
   public n_microchip: string = "";
   public raza: string = "";
 
+  
+  constructor(private serviceanimal: AnimalService, private loadingCtrl: LoadingController) {}
 
-  constructor(private serviceanimal: AnimalService) {}
+
+  async showLoading() {
+
+    this.visible = !this.visible
+    const loading = await this.loadingCtrl.create({
+      message: 'Cargando...',
+      duration: 1000,
+      spinner: 'circles',
+    });
+
+    loading.present();
+  }
 
   ngOnInit():void {
   }
 
+
+  
   //------------------------------- TESTEO ------------------------------------ 
   ListAnimal() {
     this.serviceanimal.getAnimal().subscribe((result: Animal[]) => {
@@ -88,6 +106,7 @@ export class AnimalesPage implements OnInit {
   //---------------------------------- FIN TESTEO -------------------------------
   //nuno hace referencia al nombre de la variable que almacena la data
   public buscar() {
+
     this.serviceanimal.getuno(this.buscar_input).subscribe((nuno: any) => {
       console.log(nuno);
 

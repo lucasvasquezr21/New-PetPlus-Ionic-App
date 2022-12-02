@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { VeterinariaService } from './vetiservice/veterinaria.service';
+import { VeterinariasService } from './veterinariasService/veterinarias.service';
+ 
 
 @Component({
   selector: 'app-veterinarias',
@@ -8,37 +9,45 @@ import { VeterinariaService } from './vetiservice/veterinaria.service';
 })
 export class VeterinariasPage implements OnInit {
 
+  public veterinarias = []
+
   filterTerm='';
 
-  constructor(private servicesveti: VeterinariaService) { }
+  constructor(private Servicio: VeterinariasService){}
 
-  public veterinarias: Array<any> = [];
-
-  ngOnInit():void {
-    this.Listveti();
-    this.servicesveti.getVeterinarias().subscribe(v => this.todas= v);
-
+  ngOnInit() {
+    this.veterinarias = this.Servicio.getVeterinarias()
   }
 
-  public todas: Array<any> = [];
 
-  public buscar_input='';
+  // constructor(private servicesveti: VeterinariaService) { }
 
-  Listveti(){
-    this.servicesveti.getVeterinarias().subscribe((result: any)=>{
+  // public veterinarias: Array<any> = [];
 
-      this.todas = result.veterinarias
+  // ngOnInit():void {
+  //   this.Listveti();
+  //   this.servicesveti.getVeterinarias().subscribe(v => this.todas= v);
 
-      console.log(this.todas);
-    });
-  }
+  // }
 
-  buscar(){
-    this.servicesveti.getuno(this.buscar_input).subscribe((data: any)=>{
-      console.log(data);
-    });
-  }
+  // public todas: Array<any> = [];
+
+  // public buscar_input='';
+
+  // Listveti(){
+  //   this.servicesveti.getVeterinarias().subscribe((result: any)=>{
+
+  //     this.todas = result.veterinarias
+
+  //     console.log(this.todas);
+  //   });
+  // }
+
+  // buscar(){
+  //   this.servicesveti.getuno(this.buscar_input).subscribe((data: any)=>{
+  //     console.log(data);
+  //   });
+  // }
 
 }
-
 

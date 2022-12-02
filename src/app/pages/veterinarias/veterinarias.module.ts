@@ -9,13 +9,15 @@ import { VeterinariasPageRoutingModule } from './veterinarias-routing.module';
 import { VeterinariasPage } from './veterinarias.page';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     VeterinariasPageRoutingModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+
   ],
   declarations: [VeterinariasPage]
 })

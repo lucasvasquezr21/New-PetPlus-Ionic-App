@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: VeterinariasPage
-  }
+  },
+  {
+    path: ':veterinariasID',
+    loadChildren: () => import('./detalle-veterinarias/detalle-veterinarias.module').then( m => m.DetalleVeterinariasPageModule)
+  },
 ];
 
 @NgModule({
