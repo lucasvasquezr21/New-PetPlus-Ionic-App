@@ -1,23 +1,9 @@
-ion-content{
-    ion-grid{
-        padding: 0;
-        margin-top: 6vh;
-        ion-row{
-            height: 20vh;
-            ion-col{
-                padding: 0;
-
-                ion-slides{
-                    height: 100%;
-                    background-color: white;
-                    border-radius: 40px 0 0 40px;
-
-                    img{
-                        width: 90%;
-                        height: 90%;
-                    }
-                }
-            }
-        }
+ion-slides{
+    background-color: white;
+    margin: auto;
+    width: 90%;
+    img{
+        max-width: fit-content;
+        width: 200%;
     }
 }

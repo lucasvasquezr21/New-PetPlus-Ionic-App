@@ -26,10 +26,6 @@ const routes: Routes = [
       {
         path: 'veterinarias',
         loadChildren: () => import('../veterinarias/veterinarias.module').then( m => m.VeterinariasPageModule)
-      },
-      {
-        path: ':veterinariasID',
-        loadChildren: () => import('../veterinarias/detalle-veterinarias/detalle-veterinarias.module').then( m => m.DetalleVeterinariasPageModule)
       }
     ]
   }

@@ -7,10 +7,6 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./pages/menu/menu.module').then( m => m.MenuPageModule)
   },
-  {
-    path: 'scanner',
-    loadChildren: () => import('./pages/scanner/scanner.module').then( m => m.ScannerPageModule)
-  }
 ]
 @NgModule({
   imports: [

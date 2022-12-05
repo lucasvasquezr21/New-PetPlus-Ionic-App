@@ -1,35 +1,25 @@
 <ion-content class="ion-padding">
-    <ion-label class="ion-text-center"><p>EN MANTENIMIENTO</p></ion-label>
-<!--     
-    <ion-grid>
-        <ion-row>
 
-            <ion-col size="12">
-                <ion-slides>
-                    <ion-slide *ngFor="let item of [1,2,3]">
-                        <ion-img src="data:image/png;base64,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" ></ion-img>
-                    </ion-slide>
-                </ion-slides>
-            </ion-col>
+    <ion-buttons>
+        <ion-button color="success" routerLink="/veterinarias">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+        </ion-button>
+    </ion-buttons>
 
-            <ion-col>
-                <div class="linea-gris"></div>
-                <ion-label class="ion-text-center">
-                    <p>Nombre Veterinaria</p>
-                    <p>{{datos.nombre_vet}}</p>
-                    <p>CDVET</p>
-                    <p>{{datos.nombre_vet}}</p>
-                    <p>Dirección</p>
+    <ion-label class="ion-text-center">
+        <h1>{{datos.nombre_vet}}</h1>
+    </ion-label>
 
-                    <p>Av lo blanco .... </p>
-                </ion-label>
-            
-                <div class="linea-gris"></div>
-            
-            </ion-col>
-
-
-        </ion-row>
-    </ion-grid>
-     -->
+    <ion-item>
+            <ion-slides>
+                <ion-slide *ngFor="let item of [1,2,3,4,5,6]">
+                    <img [src]="datos.img" />
+                </ion-slide>
+            </ion-slides>
+    </ion-item>
+    <br>
+    <ion-label class="ion-text-center">
+        <h2>{{datos.direccion}}</h2>
+        <h3>{{datos.descripcion}}</h3>
+    </ion-label>
 </ion-content>

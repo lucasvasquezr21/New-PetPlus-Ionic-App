@@ -1,37 +1,43 @@
-.imagenes{  
-    width: 13%
-}
+
 .card{
-    height: 20%;
     margin: auto;  
-    width: 75%;
-    border: 1px solid #7ed957;    
-    justify-content: center;
+    width: 95%;
+    height: auto;
+    border: 1px solid #3400c2;    
+    margin-bottom: 2%;
+}
+
+.justify{
+    text-align: center; 
 }
 
 .letra1{
     color: #7ed957;
-}
-
-.centrotxt{
     text-align: center;
 }
 
-.letras2{
-    font-weight: bold;
+.titulo{
+    color: white;
     text-align: center;
+    margin: 4%;
+    text-justify: auto;
 }
 
-.input{
-    width: 30%;
-    border-radius:5px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-.list{
-    max-width: 40%;
+.direccion{
     margin: auto;
+   color: #3400c2;
+    text-align: center;
+    text-justify: auto;
+;
+};
+
+.descripcion{
+    margin: auto;
+    text-size-adjust: inherit;
     text-align: center;
 }
+
+.avatar{
+    border-color: #3400c2;
+}
+

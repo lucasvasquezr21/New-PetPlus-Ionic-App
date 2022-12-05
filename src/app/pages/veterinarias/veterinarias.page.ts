@@ -9,16 +9,21 @@ import { VeterinariasService } from './veterinariasService/veterinarias.service'
 })
 export class VeterinariasPage implements OnInit {
 
-  public veterinarias = []
 
   filterTerm='';
 
   constructor(private Servicio: VeterinariasService){}
 
+  private veterinarias = []
+
   ngOnInit() {
     this.veterinarias = this.Servicio.getVeterinarias()
-  }
+  };
 
+
+  ionViewWillEnter(){
+    this.veterinarias = this.Servicio.getVeterinarias()
+  }
 
   // constructor(private servicesveti: VeterinariaService) { }
 

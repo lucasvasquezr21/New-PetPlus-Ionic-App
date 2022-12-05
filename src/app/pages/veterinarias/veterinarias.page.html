@@ -1,19 +1,16 @@
 <ion-content>
   <div>
-    <h1 class="letra1 centrotxt" > <b>Busca la veterinaria que necesitas</b> </h1>
+    <h1 class="letra1" > <b>Busca la veterinaria que necesitas</b> </h1>
     <br>
   </div>
-  
-    <ion-searchbar placeholder="Escribe tu comuna" [(ngModel)]="filterTerm" animated="true" showCancelButton="focus"></ion-searchbar>
-    <br>   
+    <ion-searchbar placeholder="Escribe tu comuna" [(ngModel)]="filterTerm" animated="true"></ion-searchbar>
+    <br>
       <ion-list>
-        <ion-item *ngFor="let p of veterinarias | filter : filterTerm" [routerLink]="['/veterinarias', p.id_veterinaria ]">
-          <ion-avatar slot="start">
-            <ion-img src="{{p.img}}"></ion-img>
-          </ion-avatar>
-          <ion-label> {{p.nombre_vet}} </ion-label>  
-          <ion-label> {{p.direccion}} </ion-label>    
-          <ion-label> {{p.descripcion}} </ion-label>
+        <ion-item color="success" class="card" *ngFor="let p of veterinarias | filter : filterTerm" [routerLink]="['/veterinarias', p.id ]">
+          <ion-avatar class="avatar" slot="start"> <ion-img src="{{p.img}}"></ion-img> </ion-avatar>
+           <h1 class="titulo" > {{p.nombre_vet}} </h1> 
+           <h5 class="direccion"> {{p.direccion}} </h5>   
+           <h5 class="descripcion"> {{p.descripcion}} </h5>
         </ion-item>
       </ion-list>
 </ion-content>
