@@ -8,12 +8,17 @@ import { Especie } from '../models/especie';
 import { Estado } from '../models/estado';
 import { Raza } from '../models/raza';
 import { Sexo } from '../models/sexo';
+import { Procedimiento } from '../models/procedimiento';
+import { ConsulReserva } from '../models/consulreserva';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AnimalService {
   
+  URLconprocedimiento: string ='https://api-petplus-duocuc.herokuapp.com/app_consulta_procedimiento/consulta_procedimiento/'
+  URLconsulreserva: string = 'https://api-petplus-duocuc.herokuapp.com/app_consulta_reserva/consulta_reserva/'
+
   URLAnimal :  string = 'https://api-petplus-duocuc.herokuapp.com/app_animal/animal/';
   URLcolor : string = "https://api-petplus-duocuc.herokuapp.com/app_color/color/";
   URLsexo : string = "https://api-petplus-duocuc.herokuapp.com/app_sexo/sexo/";
@@ -26,8 +31,8 @@ export class AnimalService {
 
   getAnimal(): Observable<Animal[]>{
     return this.http.get<Animal[]>(this.URLAnimal);
-
   }
+  
   getColor(): Observable<Color[]>{
     return this.http.get<Color[]>(this.URLcolor)
   }
@@ -35,6 +40,7 @@ export class AnimalService {
   getuno(nombre : string){
     return this.http.get<Animal>(this.URLAnimal + nombre)
   }
+  
   
   getcolor(color : string){
     return this.http.get<Color>(this.URLcolor + color)
@@ -59,5 +65,6 @@ export class AnimalService {
   getdueno(dueno:string){
     return this.http.get<Dueno>(this.URLdueno + dueno)
   }
+  
 
 }

@@ -20,5 +20,9 @@ export class DetalleVeterinariasPage implements OnInit {
     })
   }
 
+  reset(): void{
+    this.datos = []
+  }
+
   
 }

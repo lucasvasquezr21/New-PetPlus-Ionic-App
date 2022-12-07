@@ -3,7 +3,9 @@
     <h1 class="letra1" > <b>Busca la veterinaria que necesitas</b> </h1>
     <br>
   </div>
+  <div>    
     <ion-searchbar placeholder="Escribe tu comuna" [(ngModel)]="filterTerm" animated="true"></ion-searchbar>
+  </div>
     <br>
       <ion-list>
         <ion-item color="success" class="card" *ngFor="let p of veterinarias | filter : filterTerm" [routerLink]="['/veterinarias', p.id ]">
