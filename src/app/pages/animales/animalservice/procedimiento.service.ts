@@ -9,6 +9,8 @@ import { ConsulReserva } from '../models/consulreserva';
   })
   export class ProcedimientoService {
 
+    filterTerm='';
+
     URLconprocedimiento: string ='https://api-petplus-duocuc.herokuapp.com/app_consulta_procedimiento/consulta_procedimiento/'
     URLconsulreserva: string = 'https://api-petplus-duocuc.herokuapp.com/app_consulta_reserva/consulta_reserva/'
 
@@ -22,5 +24,8 @@ import { ConsulReserva } from '../models/consulreserva';
         return this.http.get<ConsulReserva[]>(this.URLconsulreserva + consulreserva)
       }
       
+    getConsulreservas(){
+     return this.http.get<any>('https://api-petplus-duocuc.herokuapp.com/app_consulta_reserva/consulta_reserva/');
+    }
 
   }

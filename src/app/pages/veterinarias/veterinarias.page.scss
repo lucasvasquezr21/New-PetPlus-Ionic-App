@@ -1,15 +1,12 @@
 
 .card{
-    margin: auto;  
-    width: 95%;
-    height: auto;
+    margin: auto;
+    width: 97%;
     border: 1px solid #3400c2;    
     margin-bottom: 2%;
-    border-radius: 1.8ch
-    
+    border-radius: 1ch;
+    height: auto;
 }
-
-
 
 .justify{
     text-align: center; 
@@ -23,25 +20,24 @@
 .titulo{
     color: white;
     text-align: center;
-    margin: 4%;
+    margin: 5%;
     text-justify: auto;
 }
 
 .direccion{
-    margin: auto;
-   color: #3400c2;
+    margin: 5%;
+    color: #3400c2;
     text-align: center;
     text-justify: auto;
 ;
 };
 
 .descripcion{
-    margin: auto;
-    text-size-adjust: inherit;
+    margin: 5%;
     text-align: center;
 }
 
-.avatar{
-    border-color: #3400c2;
-}
 
+ion-avatar {
+    --border-radius: 4px;
+  }

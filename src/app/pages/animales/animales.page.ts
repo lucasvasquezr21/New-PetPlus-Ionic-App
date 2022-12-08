@@ -5,6 +5,7 @@ import { Animal } from './models/animal';
 import { Color } from './models/color';
 import { LoadingController } from '@ionic/angular';
 import { Subject } from 'rxjs';
+// import { ConsulReserva } from './models/consulreserva';
 
 
 @Component({
@@ -16,6 +17,8 @@ export class AnimalesPage {
 
   visible:boolean = false
   
+  consulreservas: any[] = [];
+
   public animal: Array<any> = [];
   public color: Array<any> = [];
 
@@ -81,7 +84,7 @@ export class AnimalesPage {
   public fecha_pro:string = "";
 
   
-  constructor(private serviceanimal: AnimalService, private loadingCtrl: LoadingController, private serviceprocedimiento: ProcedimientoService) {}
+  constructor(private serviceanimal: AnimalService, private loadingCtrl: LoadingController, private serviceprocedimiento: ProcedimientoService,) {}
 
   dtoptions:DataTables.Settings={};
   dtTrigger:Subject<any>=new Subject<any>();
@@ -112,9 +115,18 @@ export class AnimalesPage {
       console.log(this.segundalist)
       this.dtTrigger.next(null);
     })
+
+    // this.serviceprocedimiento.getConsulreservas()
+    // .subscribe( (consulreservas:any)  =>{
+    //   console.log(consulreservas.);
+    //   this.consulreservas = consulreservas;
+    // } );
+
   }
 
+search( event ){
 
+}
 
 
   //------------------------------- TESTEO ------------------------------------ 
@@ -123,7 +135,6 @@ export class AnimalesPage {
       console.log(result);
       this.color = result;
     });
-
   }
 
   // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -148,16 +159,13 @@ export class AnimalesPage {
   public buscarproc(){
     this.serviceprocedimiento.getconsuproce().subscribe((nuno11:any)=>{
         console.log(nuno11);
-
         this.id_consulta_procedimiento = nuno11.procedimientos.id_consulta_procedimiento;
         this.observaciones = nuno11.procedimientos.observaciones;
         this.motivo_consulta = nuno11.procedimientos.motivo_consulta;
         this.peso = nuno11.procedimientos.motivo_consulta;
         this.fecha_pro = nuno11.procedimientos.fecha_pro;
         this.idconsulreserva = nuno11.procedimientos.consulta_reserva_id_consulta_reserva_id;
-
         this.numeroconsulreserva = this.idconsulreserva;
-
         this.buscarconsulreserva();
     })
   }

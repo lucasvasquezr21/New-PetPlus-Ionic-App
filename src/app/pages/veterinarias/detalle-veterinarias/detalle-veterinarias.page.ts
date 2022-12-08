@@ -15,7 +15,7 @@ export class DetalleVeterinariasPage implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.paramMap.subscribe( p => {
-      this.datos = this.Servicio.getVeterinariasById( p.get('veterinariasID'))
+      this.datos = this.Servicio.getVeterinariasById({ veterinariasID: p.get('veterinariasID') })
       console.log(this.datos)
     })
   }

@@ -29,25 +29,25 @@
       </div>
       <div class="centrotxt2">
           <ion-label position="floating">Segunda clave</ion-label>
-          <!-- <ion-input [(ngModel)]="buscar_input1" ></ion-input> -->
+          <ion-input [(ngModel)]="buscar_input1" ></ion-input>
         <div>
-          <table datatable [dtOptions]="dtoptions"  class="table table-dark" style="width:50%">
+          <table datatable [dtOptions]="dtoptions"  class="table table-dark" >
             <thead>
                 <tr>
-                    <th>	Calendar
-                      Segunda clave
+                    <th>
+                      Clave
                     </th>
                     <th>
-                      Fecha de atención
+                      Fecha
                     </th>
                     <th>
-                      Motivo de la consulta
+                      Motivo
                     </th>
                     <th>
                       Peso
                     </th>
                     <th>
-                      Observacion
+                      Obs.
                     </th>
                 </tr>
             </thead>
@@ -73,10 +73,29 @@
         </table>
         </div>
         <!-- <ion-button class="botonlistar2" shape="round" (click)="buscarproc()" >Buscar</ion-button> -->
+        <!-- <ion-searchbar placeholder="Escribe tu segunda clave" (ionChange))="buscar ( $event )" animated="true"></ion-searchbar>
+<ion-list>
+        <ion-item  *ngFor="let consuproce of segundalist">
+          <ion-label>
+            <h1>
+              {{consuproce.consulta_reserva_id_consulta_reserva_id}}
+            </h1>
+            <p>
+              {{consuproce.fecha_pro}}
+            </p>
+            <p>
+              {{consuproce.motivo_consulta}}
+            </p>
+            <p>
+              {{consuproce.peso}}
+            </p>
+            <p>
+              {{consuproce.observaciones}}
+            </p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+       -->
       </div>
-
-
   </div>
-
-
 </ion-content>

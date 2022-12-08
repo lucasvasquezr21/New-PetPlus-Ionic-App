@@ -1,12 +1,12 @@
 <ion-content class="ion-padding">
 
     <ion-buttons>
-        <ion-button href="/veterinarias">
+        <ion-button href="/veterinarias" >
             <ion-icon class="icon" name="arrow-back-outline" ></ion-icon>
         </ion-button>
     </ion-buttons>
 
-    <ion-label class="ion-text-center">
+    <ion-label class="titulos">
         <h1>{{datos.nombre_vet}}</h1>
     </ion-label>
 
@@ -19,7 +19,17 @@
     </ion-item>
     <br>
     <ion-label class="ion-text-center">
+        <div>
         <h2>{{datos.direccion}}</h2>
-        <h3>{{datos.descripcion}}</h3>
+        <h2>{{datos.descripcion}}</h2>
+        <h1 class="titulos">Contacto</h1>
+        <h2>{{datos.telefono}}</h2>
+        <h2>{{datos.correo}}</h2>
+        <h1 class="titulos">Horario</h1>
+        <h2>Desde: {{datos.hora1}} Hasta: {{datos.hora2}}</h2>
+        <h1 class="titulos" >Horas disponibles</h1>
+        <h2 >{{datos.horas}}</h2>
+        </div>
+        
     </ion-label>
 </ion-content>
