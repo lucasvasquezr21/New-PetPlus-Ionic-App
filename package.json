@@ -32,7 +32,6 @@
     "@ionic/angular": "^6.1.9",
     "angular": "^1.8.3",
     "angular-datatables": "^14.0.0",
-    "call-number": "^1.0.1",
     "cordova-plugin-android-permissions": "^1.1.5",
     "datatables": "^1.10.18",
     "datatables.net": "^1.11.3",

@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class VeterinariasService {
   
-  private veterinarias = [
+  public veterinarias = [
     {
       id:'1',
       nombre_vet:'CDVET',

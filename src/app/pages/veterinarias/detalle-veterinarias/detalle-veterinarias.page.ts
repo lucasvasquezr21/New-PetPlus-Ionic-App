@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetalleVeterinariasPage implements OnInit {
   
-  private datos = {}
+  public datos:any = {}
   
   constructor(private Servicio: VeterinariasService, private activatedRoute: ActivatedRoute ) { }
 
@@ -20,9 +20,6 @@ export class DetalleVeterinariasPage implements OnInit {
     })
   }
 
-  reset(): void{
-    this.datos = []
-  }
 
   
 }

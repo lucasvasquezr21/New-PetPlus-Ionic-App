@@ -15,7 +15,7 @@ export class VeterinariasPage implements OnInit {
 
   constructor(private Servicio: VeterinariasService, private loadingCtrl: LoadingController){}
 
-  private veterinarias = []
+  public veterinarias = []
 
   async showLoading() {
 
