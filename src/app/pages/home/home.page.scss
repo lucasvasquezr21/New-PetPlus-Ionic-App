@@ -19,13 +19,14 @@
 
 .card {
     margin: auto;  
-    width: 75%;
-    border: 1px solid #3400c2;    
+    width: 85%;
+    border: 2px solid #3400c2;    
     margin-bottom: 2%;
 }
 
 .center{
     align-items: center;
+    text-align: center;
 }
 
 .imagen {
@@ -36,6 +37,6 @@
 .letracards1{
     font-size: 135%;
     text-align: center;
-    text-justify: auto;
-    display: block;
+    text-justify: distribute;
+
 }

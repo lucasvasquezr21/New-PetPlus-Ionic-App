@@ -1,9 +1,9 @@
 
 .card{
     margin: auto;
-    width: 97%;
+    width: 98%;
     border: 1px solid #3400c2;    
-    margin-bottom: 2%;
+    margin-bottom: 3%;
     border-radius: 1ch;
     height: auto;
 }
@@ -20,8 +20,8 @@
 .titulo{
     color: white;
     text-align: center;
-    margin: 5%;
-    text-justify: auto;
+    margin: 2%;
+    font-size: large;
 }
 
 .direccion{
@@ -29,11 +29,12 @@
     color: #3400c2;
     text-align: center;
     text-justify: auto;
+    font-size: small;
 ;
 };
 
 .descripcion{
-    margin: 5%;
+    margin: 1%;
     text-align: center;
 }
 

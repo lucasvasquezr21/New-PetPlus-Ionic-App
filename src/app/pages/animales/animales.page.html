@@ -11,7 +11,7 @@
   </div>
   
   <div *ngIf="visible"> 
-    <ion-item>
+    <div class="itemAnimal" ><ion-item >
         <img class="imagen" src="assets\veterinary(2).png" >
         <ion-label><h1 class="letras1">{{nombreA}}</h1> 
                    <h1 class="letras1">{{nombreespecie }}</h1>
@@ -23,12 +23,13 @@
                    <h2 class="letras2">Nacimiento: {{fecha_nac}}</h2>
         </ion-label>
       </ion-item>
-
-      <div>
+    </div>
+    
+    <div class="itemAnimal" ><div>
         <h1 class="letra1 centrotxt2" > <b>Busca la los procedimientos de tu Pet</b> </h1>
       </div>
       <div class="centrotxt2">
-          <ion-label position="floating">Segunda clave</ion-label>
+          <ion-label position="floating">Con la Segunda clave (Asignada por tu Vet)</ion-label>
           <ion-input [(ngModel)]="buscar_input1" ></ion-input>
         <div>
           <table datatable [dtOptions]="dtoptions"  class="table table-dark" >
@@ -40,9 +41,9 @@
                     <th>
                       Fecha
                     </th>
-                    <th>
+                    <!-- <th>
                       Motivo
-                    </th>
+                    </th> -->
                     <th>
                       Peso
                     </th>
@@ -59,9 +60,9 @@
                     <td>
                       {{consuproce.fecha_pro}}
                     </td>
-                    <td>
+                    <!-- <td>
                       {{consuproce.motivo_consulta}}
-                    </td>
+                    </td> -->
                     <td>
                       {{consuproce.peso}}
                     </td>
@@ -71,7 +72,8 @@
                 </tr>
             </tbody>
         </table>
-        </div>
+        </div></div>
+      
         <!-- <ion-button class="botonlistar2" shape="round" (click)="buscarproc()" >Buscar</ion-button> -->
         <!-- <ion-searchbar placeholder="Escribe tu segunda clave" (ionChange))="buscar ( $event )" animated="true"></ion-searchbar>
 <ion-list>
