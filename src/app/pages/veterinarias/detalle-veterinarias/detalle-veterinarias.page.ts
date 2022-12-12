@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { VeterinariasService } from '../veterinariasService/veterinarias.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -7,13 +7,13 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './detalle-veterinarias.page.html',
   styleUrls: ['./detalle-veterinarias.page.scss'],
 })
-export class DetalleVeterinariasPage implements OnInit {
+export class DetalleVeterinariasPage {
   
   public datos:any = {}
   
   constructor(private Servicio: VeterinariasService, private activatedRoute: ActivatedRoute ) { }
 
-  ngOnInit() {
+  ionViewWillEnter() {
     this.activatedRoute.paramMap.subscribe( p => {
       this.datos = this.Servicio.getVeterinariasById({ veterinariasID: p.get('veterinariasID') })
       console.log(this.datos)

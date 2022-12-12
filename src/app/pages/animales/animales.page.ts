@@ -104,7 +104,7 @@ export class AnimalesPage {
 
   public segundalist:any
 
-  ngOnInit() {
+  ionViewWillEnter() {
 
     this.dtoptions={
       pagingType:'simple_numbers'

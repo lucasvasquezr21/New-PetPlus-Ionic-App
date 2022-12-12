@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ComponentDecorator, OnInit } from '@angular/core';
 import { LoadingController } from '@ionic/angular';
 import { VeterinariasService } from './veterinariasService/veterinarias.service';
  
@@ -8,16 +8,16 @@ import { VeterinariasService } from './veterinariasService/veterinarias.service'
   templateUrl: './veterinarias.page.html',
   styleUrls: ['./veterinarias.page.scss'],
 })
-export class VeterinariasPage implements OnInit {
+export class VeterinariasPage {
 
 
   filterTerm='';
 
   constructor(private Servicio: VeterinariasService, private loadingCtrl: LoadingController){}
 
-  public veterinarias = []
+  public veterinarias:any = []
 
-  async showLoading() {
+  async showLoading(): Promise<void> {
 
     const loading = await this.loadingCtrl.create({
       message: 'Cargando...',
@@ -28,10 +28,10 @@ export class VeterinariasPage implements OnInit {
     loading.present();
   }
 
-  ngOnInit() {
-    this.showLoading()
-    this.veterinarias = this.Servicio.getVeterinarias()
-  };
+  // ngOnInit(): void {
+  //   // this.showLoading()
+  //   this.veterinarias = this.Servicio.getVeterinarias()
+  // };
 
 
   ionViewWillEnter(){
