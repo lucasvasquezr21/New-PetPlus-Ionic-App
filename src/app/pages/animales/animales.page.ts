@@ -112,7 +112,7 @@ export class AnimalesPage {
 
     this.serviceprocedimiento.getconsuproce().subscribe((nuno11:any)=>{
       this.segundalist = nuno11.consulta_procedimientos
-      console.log(this.segundalist)
+      // console.log(this.segundalist)
       this.dtTrigger.next(null);
     })
 
@@ -132,7 +132,7 @@ search( event ){
   //------------------------------- TESTEO ------------------------------------ 
   ListAnimal() {
     this.serviceanimal.getAnimal().subscribe((result: Animal[]) => {
-      console.log(result);
+      // console.log(result);
       this.color = result;
     });
   }
@@ -140,7 +140,7 @@ search( event ){
   // eslint-disable-next-line @typescript-eslint/naming-convention
   ListColor(): void {
     this.serviceanimal.getColor().subscribe((result: Color[]) => {
-      console.log(result);
+      // console.log(result);
       this.animal = result;
     });
   }
@@ -158,7 +158,7 @@ search( event ){
 
   public buscarproc(){
     this.serviceprocedimiento.getconsuproce().subscribe((nuno11:any)=>{
-        console.log(nuno11);
+        // console.log(nuno11);
         this.id_consulta_procedimiento = nuno11.procedimientos.id_consulta_procedimiento;
         this.observaciones = nuno11.procedimientos.observaciones;
         this.motivo_consulta = nuno11.procedimientos.motivo_consulta;
@@ -172,7 +172,7 @@ search( event ){
 
   public buscar() {
     this.serviceanimal.getuno(this.buscar_input).subscribe((nuno: any) => {
-      console.log(nuno);
+      // console.log(nuno);
 
       //Datos propios del array list
       this.n_ficha = nuno.animales.id_animal;

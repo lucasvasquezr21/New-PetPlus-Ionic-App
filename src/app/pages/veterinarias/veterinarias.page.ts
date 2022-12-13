@@ -8,33 +8,27 @@ import { VeterinariasService } from './veterinariasService/veterinarias.service'
   templateUrl: './veterinarias.page.html',
   styleUrls: ['./veterinarias.page.scss'],
 })
-export class VeterinariasPage {
-
-
+export class VeterinariasPage{
   filterTerm='';
-
   constructor(private Servicio: VeterinariasService, private loadingCtrl: LoadingController){}
-
+  
   public veterinarias:any = []
 
-  async showLoading(): Promise<void> {
+  async showLoading() {
 
     const loading = await this.loadingCtrl.create({
       message: 'Cargando...',
       duration: 600,
       spinner: 'circles',
     });
-
     loading.present();
   }
-
   // ngOnInit(): void {
   //   // this.showLoading()
   //   this.veterinarias = this.Servicio.getVeterinarias()
   // };
-
-
   ionViewWillEnter(){
+    this.showLoading()
     this.veterinarias = this.Servicio.getVeterinarias()
   }
 

@@ -8,10 +8,7 @@
        <ion-menu-toggle *ngFor=" let item of menuItems" color="success">
         <ion-item color="success"
         button (click)="setTitle(item.title)" 
-        [routerLink]="item.path" 
-        routerDirection="root" 
-        routerLinkActive="active-item" 
-        [routerLinkActiveOptions]="{exact: true}">
+        [routerLink]="item.path" >
             <ion-icon [name]="item.icon" slot="start"></ion-icon>
             {{ item.title }}
         </ion-item>

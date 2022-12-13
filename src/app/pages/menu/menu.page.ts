@@ -7,7 +7,7 @@ import { Platform } from '@ionic/angular';
   templateUrl: './menu.page.html',
   styleUrls: ['./menu.page.scss'],
 })
-export class MenuPage implements OnInit {
+export class MenuPage {
   menuItems = [
     {
       title: 'Home',
@@ -38,7 +38,7 @@ export class MenuPage implements OnInit {
   title='Home';
   constructor(private menuCtrl: MenuController, private plt: Platform) { }
 
-  ngOnInit() {
+  ionViewWillEnter() {
     const width = this.plt.width();
     this.toggleMenu(width);
   }

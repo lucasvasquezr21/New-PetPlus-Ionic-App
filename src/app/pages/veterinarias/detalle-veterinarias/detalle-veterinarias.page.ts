@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { VeterinariasService } from '../veterinariasService/veterinarias.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -11,15 +11,12 @@ export class DetalleVeterinariasPage {
   
   public datos:any = {}
   
-  constructor(private Servicio: VeterinariasService, private activatedRoute: ActivatedRoute ) { }
+  constructor(private Servicio: VeterinariasService, private activatedRoute: ActivatedRoute) { }
 
   ionViewWillEnter() {
     this.activatedRoute.paramMap.subscribe( p => {
       this.datos = this.Servicio.getVeterinariasById({ veterinariasID: p.get('veterinariasID') })
       console.log(this.datos)
-    })
-  }
-
-
-  
-}
+    });
+  };
+};
